@@ -1,0 +1,10 @@
+<h1>Books</h1>
+
+<% @books.each do |book| %>
+  <div class="article">
+    <h2><%= link_to book.title, book %></h2>
+    <%= pluralize(book.quotes.size, "Quotation") %>
+  </div>
+<% end %>
+
+<p><%= link_to 'New Book', new_book_path %></p>

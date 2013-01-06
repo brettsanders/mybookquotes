@@ -1,0 +1,17 @@
+<h1><%= @book.title %></h1>
+
+<ol class="quotes">
+<% @book.quotes.each do |quote| %>
+  <li>
+    <%= quote.content %>
+    <ol class="notes">
+      <% quote.notes.each do |note| %>
+        <li><%= note.content %></li>
+      <% end %>
+    </ol>
+  </li>
+<% end %>
+</ol>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back to Books', books_path %>

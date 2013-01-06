@@ -1,0 +1,10 @@
+<fieldset>
+  <%= f.label :content, "Quote" %><br />
+  <%= f.text_area :content %><br />
+  <%= f.check_box :_destroy %>
+  <%= f.label :_destroy, "Remove Quote" %>
+  <%= f.fields_for :notes do |builder| %>
+    <%= render 'note_fields', f: builder %>
+  <% end %>
+  <%= link_to_add_fields "Add Note", f, :notes %>
+</fieldset>
