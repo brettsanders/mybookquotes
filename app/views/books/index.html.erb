@@ -2,8 +2,9 @@
 
 <% @books.each do |book| %>
   <div class="article">
-    <h2><%= link_to book.title, book %></h2>
-    <%= pluralize(book.quotes.size, "Quotation") %>
+    <h2><%= link_to book.title, book %></h2><br />
+    <%= pluralize(book.quotes.size, "Quotation") %><br />
+    <%= image_tag book.image_url(:thumb).to_s %>
   </div>
 <% end %>
 

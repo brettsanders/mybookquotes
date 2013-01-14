@@ -24,6 +24,7 @@ end
 
 gem 'jquery-rails'
 gem 'carrierwave'
+gem 'rmagick'
 
 group :production do
   gem 'pg'
