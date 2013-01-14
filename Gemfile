@@ -23,6 +23,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'carrierwave'
 
 group :production do
   gem 'pg'
