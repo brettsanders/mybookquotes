@@ -5,6 +5,7 @@
 <% @book.quotes.each do |quote| %>
   <li>
     <%= quote.content %>
+    <%= image_tag quote.image_url.to_s %>
     <ol class="notes">
       <% quote.notes.each do |note| %>
         <li><%= note.content %></li>

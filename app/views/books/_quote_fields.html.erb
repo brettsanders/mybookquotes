@@ -1,6 +1,7 @@
 <fieldset>
   <%= f.label :content, "Quote" %><br />
   <%= f.text_area :content %><br />
+  <%= f.file_field :image %>
   <%= f.check_box :_destroy %>
   <%= f.label :_destroy, "Remove Quote" %>
   <%= f.fields_for :notes do |builder| %>
